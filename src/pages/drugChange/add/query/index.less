@@ -1,0 +1,409 @@
+@category-width: 70%;
+@content-width: 80%;
+@content-height: 60vh;
+.drugQuery {
+  position: relative;
+  width: 100%;
+  height: 88vh;
+  padding-top: 5vh;
+
+  .drugQueryTitle {
+    width: 100%;
+    height: 40px;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+  }
+
+  .drugQueryCategoryTag {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: @category-width;
+    height: 75px;
+    margin: 20px auto 0;
+
+    .drugQueryTag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 18%;
+      height: 55px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0px 6px 18px 0px rgba(49, 95, 232, 0.1);
+
+      .drugQueryCategoryIcon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .drugQueryCategoryTitle {
+        height: 20px;
+        padding: 0 5px;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .drugQueryArrow {
+        width: 10px;
+        height: 10px;
+        border: 1px solid #313131;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    .drugQueryTagSelected {
+      border: 2px solid #0a47ed;
+    }
+
+    .drugQueryTagNoSelected {
+      border: none;
+    }
+  }
+
+  .drugQuerySearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: @content-width;
+    margin: 20px auto 0;
+    padding: 10px 20px;
+    background: #ffffff;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0px 6px 18px 0px rgba(49, 95, 232, 0.1);
+
+    .drugQueryMagnifier {
+      display: block;
+      flex: none;
+      width: 17px;
+      height: 17px;
+    }
+
+    .drugQueryInputContainer {
+      display: flex;
+      flex: auto;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
+      min-height: 40px;
+      margin: 0 10px;
+
+      .inputTag {
+        padding: 5px;
+
+        .inputTagBorder {
+          display: flex;
+          align-items: center;
+          padding: 5px 10px;
+          background-color: #e7ecfb;
+          border-radius: 5px;
+          .tagText {
+            color: #0a47ed;
+            font-size: 14px;
+            line-height: 22px;
+            white-space: nowrap;
+          }
+
+          .tagIcon {
+            display: block;
+            width: 15px;
+            height: 15px;
+            margin-left: 5px;
+          }
+        }
+      }
+
+      .drugQueryInput {
+        flex: auto;
+        min-width: 120px;
+        height: 40px;
+        font-size: 14px;
+        line-height: 22px;
+        background-color: white;
+        border: none;
+        outline: none;
+      }
+
+      .drugQueryInput::-webkit-input-placeholder {
+        /* placeholder颜色  */
+        color: #aab2bd;
+        /* placeholder字体大小  */
+        font-size: 14px;
+      }
+    }
+
+    .drugQuerySearchBtn {
+      flex: none;
+      width: 120px;
+      height: 40px;
+      color: white;
+      font-size: 18px;
+      line-height: 40px;
+      background-color: #0a47ed;
+      border: none;
+      border-radius: 20px;
+      outline: none;
+    }
+  }
+
+  .drugQueryTable {
+    position: relative;
+    width: @content-width;
+    height: @content-height;
+    margin: 0 auto;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+
+    .drugQueryRow {
+      width: 100%;
+      padding: 10px 30px;
+      background-color: transparent;
+    }
+
+    .drugQueryRow:hover {
+      background-color: #e7ecfb;
+    }
+  }
+
+  .drugQueryTable::-webkit-scrollbar {
+    display: none;
+  }
+
+  .drugQueryDataClassfication {
+    position: relative;
+    width: @content-width;
+    height: @content-height;
+    margin: 0 auto;
+    padding: 1px;
+    background-color: transparent;
+
+    .drugQueryContainer {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 50px);
+      margin-top: 50px;
+      padding: 30px 50px 30px 70px;
+      overflow-y: scroll;
+      background-color: white;
+      border-radius: 10px;
+      .drugQueryCardSection {
+        position: relative;
+        padding-bottom: 20px;
+
+        .drugQueryCardSectionIcon {
+          position: absolute;
+          top: 12px;
+          left: -20px;
+          width: 12px;
+          height: 12px;
+        }
+
+        .drugQueryCardSectionMore {
+          position: absolute;
+          top: 0px;
+          right: 10px;
+          color: #0a47ed;
+          font-size: 14px;
+          line-height: 35px;
+        }
+
+        .drugQueryCardSectionTitle {
+          padding-bottom: 10px;
+          color: #353535;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 35px;
+        }
+        .drugQueryCardRow {
+          padding-bottom: 10px;
+          .drugQueryCardRowTitle {
+            padding-bottom: 5px;
+            color: #353535;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+          }
+          .drugQueryCardLine {
+            color: #8f8f8f;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+
+    .drugQueryContainer::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .drugQueryDrugs {
+    position: relative;
+    width: @content-width;
+    height: @content-height;
+    margin: 0 auto;
+    padding: 1px;
+
+    .drugQueryDrugsContainer {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 50px);
+      margin-top: 50px;
+      padding: 10px 50px;
+      background-color: white;
+
+      .drugQueryListTips {
+        position: relative;
+        width: 100%;
+        color: #8f8f8f;
+        font-size: 13px;
+        line-height: 13px;
+        text-align: center;
+      }
+
+      .drugQueryDrugsList {
+        width: 100%;
+        height: calc(60vh - 150px);
+        margin-top: 20px;
+        padding: 0 30px;
+        overflow-y: scroll;
+        .drugQueryRow {
+          width: 100%;
+          padding: 20px 0;
+          .drugQueryRowTitle {
+            width: 100%;
+            color: #353535;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 25px;
+          }
+
+          .drugQueryRowText {
+            width: 100%;
+            color: #8f8f8f;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 25px;
+          }
+        }
+      }
+
+      .drugQueryDrugsList::-webkit-scrollbar {
+        display: none;
+      }
+
+      .drugQueryPagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+      }
+    }
+  }
+
+  .drugQueryDetail {
+    position: relative;
+    width: @content-width;
+    height: @content-height;
+    margin: 0 auto;
+    padding: 1px;
+
+    .drugQueryDrugsContainer {
+      position: relative;
+      width: 100%;
+      height: calc(100% - 50px);
+      margin-top: 50px;
+      padding: 10px 50px;
+      overflow-y: scroll;
+      background-color: white;
+      border-radius: 10px;
+
+      .drugQueryDetailHead {
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 35px;
+        .drugQueryDetailName {
+          width: calc(100% - 160px);
+          height: 35px;
+          color: #353535;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 35px;
+        }
+
+        .drugQueryCollection {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 160px;
+          .drugQueryCollectionTips {
+            height: 20px;
+            padding-right: 5px;
+            color: #0a47ed;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 20px;
+          }
+
+          .drugQueryCollectionIcon {
+            display: block;
+            width: 17px;
+            height: 19px;
+            margin-bottom: 5px;
+          }
+        }
+      }
+
+      .drugQueryDetailTips {
+        width: 100%;
+        height: 20px;
+        color: #8f8f8f;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 20px;
+      }
+
+      .drugQueryDetailRow {
+        position: relative;
+        width: 100%;
+        margin-top: 30px;
+        .drugQueryDetailRowTitle {
+          width: 100%;
+          margin-bottom: 5px;
+          color: #353535;
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 25px;
+        }
+
+        .drugQueryDetailRowText {
+          width: 100%;
+          color: #8f8f8f;
+          font-weight: 400;
+          font-size: 13px;
+          line-height: 21px;
+        }
+
+        .drugQueryDetailRowCircle {
+          position: absolute;
+          top: 8px;
+          left: -20px;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    .drugQueryDrugsContainer::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
